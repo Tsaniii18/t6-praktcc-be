@@ -7,17 +7,19 @@ app.use(cors());
 app.use(express.json());
 app.use(route);
 
-// Endpoint root dengan format teks sederhana
+// Endpoint root dengan format teks rapi menggunakan <pre>
 app.get('/', (req, res) => {
   res.send(`
-    🚀 Backend is running!
+    <pre>
+🚀 Backend is running!
 
-    Available Endpoints:
-    - GET     /note          -> Ambil semua catatan
-    - GET     /note/:id      -> Ambil catatan berdasarkan ID
-    - POST    /note          -> Buat catatan baru
-    - PATCH   /note/:id      -> Perbarui catatan berdasarkan ID
-    - DELETE  /note/:id      -> Hapus catatan berdasarkan ID
+Available Endpoints:
+- GET     /note          -> Ambil semua catatan
+- GET     /note/:id      -> Ambil catatan berdasarkan ID
+- POST    /note          -> Buat catatan baru
+- PATCH   /note/:id      -> Perbarui catatan berdasarkan ID
+- DELETE  /note/:id      -> Hapus catatan berdasarkan ID
+    </pre>
   `);
 });
 
