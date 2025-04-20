@@ -11,7 +11,7 @@ app.use(route);
 app.get('/', (req, res) => {
   res.send(`
     <pre>
-🚀 Backend is running!
+Backend is running!
 
 Available Endpoints:
 - GET     /note          -> Ambil semua catatan
